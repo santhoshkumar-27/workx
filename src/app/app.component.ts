@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this.post$.pipe(
-      tap(value => console.log('value', value)),
+      tap(value => console.log('outer stream', value)),
       /*
         switchMap cancel any inner stream doing actively, when the higher order observable emitted new value, the inner stream get cancels
       */
